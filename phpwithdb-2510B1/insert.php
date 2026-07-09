@@ -17,9 +17,11 @@ if (isset($_POST["saveemployee"])) {
     $run = mysqli_query($connection, $query);
 
     if ($run) {
-        echo "<br>";
-        echo "DATA INSERTED SUCCESSFULLY <br>";
-        echo "<a href = 'form.php'>Add more employee </a>";
+  echo "<script>
+        alert ('Data Inserted Succesfully');
+        window.location.href = 'read.php'
+        
+        </script>";
     } else {
         echo "Insertion Failed: ";
     }
