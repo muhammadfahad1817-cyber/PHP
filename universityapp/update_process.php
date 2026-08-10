@@ -16,7 +16,6 @@ if (isset($_POST["updatebtn"])) {
     $newImageTemp = $newImage["tmp_name"];
 
     $uploadFolder = "images/";
-
     //check if user uploaded an image
     if (is_uploaded_file($newImageTemp)) {
         //user new upload
@@ -50,7 +49,7 @@ if (isset($_POST["updatebtn"])) {
                         window.location.href = 'index.php'
                         </script>";
                 } else {
-                    echo "Data not Inserted.";
+                    echo "Data not Upadated.";
                 }
             } else {
                 echo "<script>alert('Image Should be less then 5MB')
@@ -64,9 +63,8 @@ if (isset($_POST["updatebtn"])) {
         }
     } else {
         //user not uploaded an image
-
-
-                        //query for DB
+        
+ //query for DB
                 $query = "UPDATE students SET
             name = '$name',
             age = '$age',
@@ -82,7 +80,7 @@ if (isset($_POST["updatebtn"])) {
                         window.location.href = 'index.php'
                         </script>";
                 } else {
-                    echo "Data not Inserted.";
+                    echo "Data not Upadated.";
                 }
     }
 }

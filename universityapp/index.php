@@ -1,4 +1,13 @@
+
+<?php
+session_start();
+if(!isset($_SESSION["username"])){
+    header("location: login.php");
+}
+?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +16,9 @@
 </head>
 <body>
     <h1>All Students</h1>
-    <a href="form.php">Add A Student</a>
+    <a href="form.php">Add A Student</a> <br>
+    <a href="signup.php">Sign Up</a> <br>
+    <a href="login.php">Login</a> <br>
     <hr>
 
   
